@@ -1,0 +1,29 @@
+{
+  "name": "reliv/rcm-terms-conditions",
+  "description": "Allow display, tracking and services related to terms and conditions",
+  "type": "library",
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "rcm",
+    "module",
+    "zf2"
+  ],
+  "minimum-stability": "stable",
+  "homepage": "https://github.com/reliv/rcm-terms-conditions",
+  "authors": [
+    {
+      "name": "James Jervis",
+      "email": "jjervis@relivinc.com",
+      "homepage": "https://github.com/reliv"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "zendframework/zendframework": "2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Reliv\\RcmTermsConditions\\": "src/"
+    }
+  }
+}
