@@ -19,7 +19,7 @@ use Reliv\RcmTermsConditions\Model\TermsConditions as TermsConditionsModel;
  */
 interface TermsConditions
 {
-    public function getTermsConditions($alias);
+    public function getTermsConditions($alias, $locale = 'en_US');
 
     public function createTermsConditions(TermsConditionsModel $termsConditions);
 

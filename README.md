@@ -1,6 +1,8 @@
 RCM Terms Conditions
 ====================
 
+NOTE: This module may be incommplete.
+
 ##### Module title: #####
 RCM Terms Conditions
 
