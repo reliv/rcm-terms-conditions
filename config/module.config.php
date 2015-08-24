@@ -4,6 +4,7 @@ return [
      * Configuration
      */
     'Reliv\RcmTermsConditions' => [
+        'defaultLocale' => 'en_US'
     ],
     'controllers' => [
         'invokables' => [

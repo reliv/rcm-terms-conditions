@@ -47,6 +47,31 @@ class ApiTermsConditionsController extends AbstractRestfulJsonController
     }
 
     /**
+     * getConfig
+     *
+     * @return array
+     */
+    protected function getConfig()
+    {
+        $config =  $this->getServiceLocator()->get(
+            'config'
+        );
+
+        return $config['Reliv\RcmTermsConditions'];
+    }
+
+    /**
+     * getDefaultLocal
+     *
+     * @return string
+     */
+    protected function getDefaultLocal()
+    {
+        $config = $this->getConfig();
+        return $config['defaultLocale'];
+    }
+
+    /**
      * get
      *
      * @param mixed $alias
@@ -64,6 +89,12 @@ class ApiTermsConditionsController extends AbstractRestfulJsonController
         $locale = $this->getSite()->getLocale();
 
         $result = $this->getRepository()->getTermsConditions($alias, $locale);
+
+        // Try default locale if not found
+        if (empty($result)) {
+            $defaultLocale = $this->getDefaultLocal();
+            $result = $this->getRepository()->getTermsConditions($alias, $defaultLocale);
+        }
 
         if (empty($result)) {
             $this->addApiMessage(new TermsNotFoundApiMessage('apiTermsConditions'));
