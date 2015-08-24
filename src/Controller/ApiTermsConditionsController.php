@@ -58,7 +58,7 @@ class ApiTermsConditionsController extends AbstractRestfulJsonController
         // @todo Make input filter
         $alias = (string)$alias;
         $alias = str_replace(' ', '_', $alias);
-        $alias = preg_replace("/[^a-zA-Z0-9]/", "", $alias);
+        $alias = preg_replace("/[^a-zA-Z0-9_-]/", "", $alias);
 
         // @todo allow this to also come form url query string
         $locale = $this->getSite()->getLocale();
