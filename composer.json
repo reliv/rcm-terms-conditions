@@ -1,5 +1,5 @@
 {
-  "name": "reliv/rcm-terms-conditions",
+  "name": "rcm/terms-conditions",
   "description": "Allow display, tracking and services related to terms and conditions",
   "type": "library",
   "license": "BSD-3-Clause",
@@ -22,8 +22,8 @@
     "zendframework/zendframework": "2.*",
     "doctrine/doctrine-orm-module": "0.*",
     "rwoverdijk/assetmanager": "1.*",
-    "reliv/rcm": "0.*",
-    "reliv/rcm-api-lib": "0.*"
+    "rcm/core": "0.*",
+    "rcm/api-lib": "0.*"
   },
   "autoload": {
     "psr-4": {
