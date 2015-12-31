@@ -22,7 +22,7 @@
     "zendframework/zendframework": "2.*",
     "doctrine/doctrine-orm-module": "0.*",
     "rwoverdijk/assetmanager": "1.*",
-    "rcm/core": "0.*",
+    "rcm/core": "1.*",
     "rcm/api-lib": "0.*"
   },
   "autoload": {
