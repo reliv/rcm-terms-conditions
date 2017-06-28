@@ -42,7 +42,7 @@ class ApiTermsConditionsController extends AbstractRestfulJsonController
     protected function getSite()
     {
         return $this->getServiceLocator()->get(
-            'Rcm\Service\CurrentSite'
+            \Rcm\Service\CurrentSite::class
         );
     }
 
