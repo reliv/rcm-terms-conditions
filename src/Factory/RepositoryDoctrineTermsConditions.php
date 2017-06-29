@@ -2,8 +2,8 @@
 
 namespace Reliv\RcmTermsConditions\Factory;
 
+use Interop\Container\ContainerInterface;
 use Reliv\RcmTermsConditions\Repository\DoctrineTermsConditions;
-use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 /**
@@ -19,21 +19,20 @@ use Zend\ServiceManager\ServiceLocatorInterface;
  * @version   Release: <package_version>
  * @link      https://github.com/reliv
  */
-class RepositoryDoctrineTermsConditions implements FactoryInterface
+class RepositoryDoctrineTermsConditions
 {
-
     /**
-     * Creates Service
+     * __invoke
      *
-     * @param ServiceLocatorInterface $serviceLocator Zend Service Locator
+     * @param $container ContainerInterface|ServiceLocatorInterface
      *
      * @return DoctrineTermsConditions
      */
-    public function createService(ServiceLocatorInterface $serviceLocator)
+    public function __invoke($container)
     {
         /** @var \Doctrine\ORM\EntityManagerInterface $entityManager */
-        $entityManager = $serviceLocator->get('Doctrine\ORM\EntityManager');
+        $entityManager = $container->get('Doctrine\ORM\EntityManager');
 
-        return $entityManager->getRepository('Reliv\RcmTermsConditions\Entity\DoctrineTermsConditions');
+        return $entityManager->getRepository(\Reliv\RcmTermsConditions\Entity\DoctrineTermsConditions::class);
     }
 }
