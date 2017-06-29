@@ -30,7 +30,7 @@ class ApiTermsConditionsController extends AbstractRestfulJsonController
     protected function getRepository()
     {
         return $this->getServiceLocator()->get(
-            'Reliv\RcmTermsConditions\Repository\TermsConditions'
+            \Reliv\RcmTermsConditions\Repository\TermsConditions::class
         );
     }
 

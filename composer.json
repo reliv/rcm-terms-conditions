@@ -19,11 +19,12 @@
   ],
   "require": {
     "php": ">=5.4.0",
-    "zendframework/zendframework": "2.*",
     "doctrine/doctrine-orm-module": "0.* || 1.*",
-    "rwoverdijk/assetmanager": "1.*",
     "rcm/core": "1.*",
-    "rcm/api-lib": "0.*"
+    "rcm/api-lib": "0.*",
+    "rwoverdijk/assetmanager": "1.*",
+    "zendframework/zend-mvc": "2.*",
+    "zendframework/zend-servicemanager": "2.*"
   },
   "autoload": {
     "psr-4": {

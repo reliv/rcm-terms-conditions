@@ -8,8 +8,8 @@ return [
     ],
     'controllers' => [
         'invokables' => [
-            'Reliv\RcmTermsConditions\Controller\ApiTermsConditionsController'
-            => 'Reliv\RcmTermsConditions\Controller\ApiTermsConditionsController'
+            \Reliv\RcmTermsConditions\Controller\ApiTermsConditionsController::class
+            => \Reliv\RcmTermsConditions\Controller\ApiTermsConditionsController::class
         ],
     ],
     //
@@ -21,7 +21,7 @@ return [
                     'route' => '/api/terms-conditions[/:id]',
                     'defaults' => [
                         'controller' =>
-                            'Reliv\RcmTermsConditions\Controller\ApiTermsConditionsController',
+                            \Reliv\RcmTermsConditions\Controller\ApiTermsConditionsController::class,
                     ]
                 ],
             ],
@@ -30,8 +30,8 @@ return [
     //
     'service_manager' => [
         'factories' => [
-            'Reliv\RcmTermsConditions\Repository\TermsConditions' =>
-                'Reliv\RcmTermsConditions\Factory\RepositoryDoctrineTermsConditions'
+            \Reliv\RcmTermsConditions\Repository\TermsConditions::class =>
+                \Reliv\RcmTermsConditions\Factory\RepositoryDoctrineTermsConditions::class
         ]
     ],
     //
@@ -39,7 +39,7 @@ return [
         'driver' => [
 
             'RelivRcmTermsConditions' => [
-                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
+                'class' => \Doctrine\ORM\Mapping\Driver\AnnotationDriver::class,
                 'cache' => 'array',
                 'paths' => [
                     __DIR__ . '/../src/Entity'
